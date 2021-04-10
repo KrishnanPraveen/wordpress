@@ -1,13 +1,13 @@
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-@color-softRed: #222831;
-@color-lightViolet: #30475e;
+@color-primary: #2b2e4a;
+@color-secondary: #e84545;
 @color-white: #fff;
 @color-black: #000;
 @color-gray: #e7e6e1;
-@color-lightblue: #9ab3f5;
-@color-violet: #7579e7;
+@color-darkred: #903749;
+@color-darkenviolet: #53354a;
 
 
 @primary_font: 'Source Sans Pro';
@@ -22,17 +22,9 @@
    padding-left:15px;
    margin-right:auto;
    margin-left:auto;
-   @media (min-width: 576px) {
-      max-width:540px;
-   }
-   @media (min-width: 768px) {
-      max-width:720px;
-   }
-   @media (min-width: 992px) {
-      max-width:960px;
-   }
-   @media (min-width: 1200px) {
-      max-width:1140px;
+   max-width: 90%;
+   @media (min-width: 1500px) {
+      max-width:1440px;
    }
 }
 
@@ -310,6 +302,12 @@
    -ms-transform-origin: @arguments;
    -o-transform-origin: @arguments;
    transform-origin: @arguments;
+}
+
+.box-shadow(@x, @y, @blur, @alpha) {
+   -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+   -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+   box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
 // Cubic

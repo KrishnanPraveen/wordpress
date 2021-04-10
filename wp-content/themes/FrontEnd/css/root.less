@@ -28,6 +28,10 @@ h6{
    font-family: @primary_font;
 }
 
+p{
+   margin: 0 0 1rem 0;
+}
+
 img{
    max-width: 100%;
    height: auto;
@@ -35,5 +39,65 @@ img{
 
 a{
    text-decoration: none;
-   color: @color-softRed;
+   color: @color-secondary;
+}
+
+.wrapper{
+   .container();
+}
+
+.v-center{
+   top: 50%;
+   .translateY (@y: -50%);
+   width: 100%;
+}
+
+.pos-rel{
+   position: relative;
+}
+.pos-abs{
+   position: absolute;
+}
+
+.mb-10{
+   margin: 0 0 1rem 0;
+}
+.mb-20{
+   margin: 0 0 2rem 0;
+}
+.mb-30{
+   margin: 0 0 3rem 0;
+}
+.mb-40{
+   margin: 0 0 4rem 0;
+}
+.mb-50{
+   margin: 0 0 5rem 0;
+}
+
+.btn{
+   border: 1px solid @color-black;
+   padding: .5rem 2rem;
+   border-radius: 2px;
+   display: inline-block;
+   color: @color-gray;
+   background-color: @color-black;
+   height: 4rem;
+   text-transform: capitalize;
+}
+.btn-hover {
+   position: relative;
+}
+.btn-hover::after {
+   position: absolute;
+   width: 0;
+   height: 2px;
+   background-color: @color-gray;
+   content: "";
+   left: 0px;
+   bottom: -1px;
+   transition: width .5s ease-out;
+}
+.btn-hover:hover::after {
+   width: 100%;
 }

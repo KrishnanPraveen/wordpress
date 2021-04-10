@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$(".nav-list li").hover(function(){$(this).children("ul").slideToggle("slow")})});

@@ -1,0 +1,68 @@
+@import 'mixins.less';
+
+header{
+    background-color: @color-darkred;
+    .box-shadow(0, 1px, 4px, .16);
+    .logo{
+        a{
+            display: block;
+            line-height: 1;
+        }
+    }
+    .wrapper{
+        .flex-display(@display: flex);
+        .flex-flow(@flow: row wrap);
+        .justify-content(@justify: space-between);
+        .align-items(@align: center);
+    }
+    .nav-list{
+        .flex-display(@display: flex);
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        font-family: @primary_font;
+        >li{
+            padding: 1rem;
+            position: relative;
+            >a{
+                color: @color-white;
+                padding: 0 .5rem;
+                text-transform: uppercase;
+            }
+            >ul{
+                padding: 1rem;
+                margin: 0;
+                list-style-type: none;
+                position: absolute;
+                background-color: @color-darkenviolet;
+                top: 100%;
+                .border-radius (@radius: 3px);
+                min-width: 17rem;
+                display: none;
+                li{
+                    padding: 0 0 .7rem 0;
+                    position: relative;
+                    &:last-child{
+                        padding: 0;
+                    }
+                    ul{
+                        padding: 1rem;
+                        margin: 0;
+                        list-style-type: none;
+                        position: absolute;
+                        background-color: @color-secondary;
+                        left: calc(100% + 10px);
+                        .border-radius (@radius: 3px);
+                        min-width: 17rem;
+                        top: 0;
+                    }
+                }
+                a{
+                    color: @color-white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+    }
+}
